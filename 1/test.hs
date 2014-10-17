@@ -21,6 +21,7 @@ init xs = take (length xs - 1) xs
 init' (x:[]) = []
 init' (x:xs) = x:(init' xs)
 
+-- non terminating qsort
 qsort [] = []
 qsort xs = x : qsort larger ++ qsort smaller
   where x = maximum xs
